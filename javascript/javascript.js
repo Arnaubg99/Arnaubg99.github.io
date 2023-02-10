@@ -49,7 +49,7 @@ const projectes = [
 
 //////////////////////////ANIMACIO ENTRADA////////////////////////////////////////////////////////////////////////////////////////
 setTimeout(function () {
-    // entrada.style.display = "none";
+    entrada.style.display = "none";
     html.style.overflowY = "auto";
     // if(!window.matchMedia("(any-hover: none)").matches) {
     //     cursor.style.display = "block";

@@ -413,7 +413,7 @@ nav{
     display: flex;
     position: fixed;
     flex-direction: row;
-    /* animation: 1.2s linear 2.5s desapareixerOpacity; */
+    animation: 1.2s linear 2.5s desapareixerOpacity;
 }
 .columna{
     width: 20%;
