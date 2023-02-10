@@ -152,6 +152,9 @@ h3{
 .titols-seccions-wrap{
     text-align: center;
 }
+.text{
+    z-index: 1;
+}
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* ///////////////////////NAVBAR/////////////////////////////////////////////////////////////////////////// */
@@ -433,7 +436,6 @@ nav{
     align-items: center;
     text-align: center;
     white-space: nowrap;
-    z-index: 1;
     animation: 1s linear 0s caureColumna;
 }
 #columna4{
