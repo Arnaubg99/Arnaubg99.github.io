@@ -257,6 +257,8 @@ nav{
     touch-action: manipulation;
     white-space: nowrap;
     position: relative;
+    text-decoration: none;
+    font-size: 1.8rem;
     cursor: url("../assets/punt.svg"),pointer;
 }
 #cv-button::before{
@@ -278,8 +280,6 @@ nav{
     transition: 0.7ms;
     opacity: 0%;
     animation: glowing 20s linear infinite;
-    text-decoration: none;
-    font-size: 1.8rem;
 
 }
 #cv-button:hover::before{
@@ -464,6 +464,7 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
+    white-space: nowrap;
     animation: 1s linear 0s caureColumna;
 }
 #columna4{
