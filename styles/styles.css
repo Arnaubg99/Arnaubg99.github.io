@@ -247,6 +247,40 @@ nav{
 #cv-button{
     width: 150px;
     height: 50px;
+    font-family: Kanit;
+    color: var(--blanc);
+    background: linear-gradient(to bottom right, var(--negre2), var(--morat));
+    border: none;
+    border-radius: 10px;
+    outline: transparent;
+    text-align: center;
+    touch-action: manipulation;
+    white-space: nowrap;
+    position: relative;
+    cursor: url("../assets/punt.svg"),pointer;
+}
+#cv-button::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    z-index: -1;
+    width: 110%;
+    height: 110%;
+    background: linear-gradient(
+        45deg,
+        var(--morat), var(--negre), deeppink, var(--negre),
+        var(--morat), var(--negre), deeppink, var(--negre)
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    transition: 0.7ms;
+    opacity: 0%;
+    animation: glowing 20s linear infinite;
+}
+#cv-button:hover::before{
+    opacity: 100%;
 }
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 
