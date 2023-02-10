@@ -589,7 +589,7 @@ nav{
     .nav-button:hover::before{
         opacity: 0;
     }
-    .cursor{
+    .cursor-container{
         display: none;
     }
 }
