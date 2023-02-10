@@ -432,6 +432,7 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
+    white-space: normal;
     animation: 1s linear 0s caureColumna;
 }
 #columna4{
