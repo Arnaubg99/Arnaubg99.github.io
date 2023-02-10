@@ -278,6 +278,9 @@ nav{
     transition: 0.7ms;
     opacity: 0%;
     animation: glowing 20s linear infinite;
+    text-decoration: none;
+    font-size: 1.8rem;
+
 }
 #cv-button:hover::before{
     opacity: 100%;
