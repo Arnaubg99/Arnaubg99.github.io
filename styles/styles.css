@@ -433,6 +433,7 @@ nav{
     align-items: center;
     text-align: center;
     white-space: nowrap;
+    z-index: 1;
     animation: 1s linear 0s caureColumna;
 }
 #columna4{
