@@ -20,60 +20,60 @@ const logoInstagram = document.querySelector("#logo-instagram");
 const logosContacte = document.querySelectorAll(".logo-contacte");
 const titolLogo = document.querySelector("#text-contacte-titol");
 const textLogo = document.querySelector("#text-contacte");
-const projectes =[ 
+const projectes = [
     {
-        projecteImg : "assets/CapturesProjectes/cami-al-mercat.jpg",
-        projecteTitol : "Camino al mercado",
-        projecteInfo : "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink : ""
+        projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
+        projecteTitol: "Camino al mercado",
+        projecteInfo: "Proyecto hecho con HTML, CSS y JavaScript.",
+        projecteLink: ""
     },
     {
-        projecteImg : "assets/CapturesProjectes/calculadora.jpg",
-        projecteTitol : "Calculadora",
-        projecteInfo : "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink : ""
+        projecteImg: "assets/CapturesProjectes/calculadora.jpg",
+        projecteTitol: "Calculadora",
+        projecteInfo: "Proyecto hecho con HTML, CSS y JavaScript.",
+        projecteLink: ""
     },
     {
-        projecteImg : "assets/CapturesProjectes/tribut.jpg",
-        projecteTitol : "Página tributo",
-        projecteInfo : "Proyecto hecho con HTML y CSS.",
-        projecteLink : ""
+        projecteImg: "assets/CapturesProjectes/tribut.jpg",
+        projecteTitol: "Página tributo",
+        projecteInfo: "Proyecto hecho con HTML y CSS.",
+        projecteLink: ""
     },
     {
-        projecteImg : "assets/CapturesProjectes/formulari.jpg",
-        projecteTitol : "Ejemplo de formulario",
-        projecteInfo : "Proyecto hecho con HTML y CSS.",
-        projecteLink : ""
+        projecteImg: "assets/CapturesProjectes/formulari.jpg",
+        projecteTitol: "Ejemplo de formulario",
+        projecteInfo: "Proyecto hecho con HTML y CSS.",
+        projecteLink: ""
     },
 ];
 
 //////////////////////////ANIMACIO ENTRADA////////////////////////////////////////////////////////////////////////////////////////
 setTimeout(function () {
-    entrada.style.display ="none";
+    entrada.style.display = "none";
     html.style.overflowY = "auto";
     // if(!window.matchMedia("(any-hover: none)").matches) {
     //     cursor.style.display = "block";
     // }
-  }, 3700);
+}, 3700);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////BOTONS NAVBAR//////////////////////////////////////////////////////////////////////////////////////////
-sobreMiButton.addEventListener('click',function(){
-    if(!sobreMiButton.classList.contains('selected')){
+sobreMiButton.addEventListener('click', function () {
+    if (!sobreMiButton.classList.contains('selected')) {
         sobreMiButton.classList.add('selected');
         projectesButton.classList.remove('selected');
         contacteButton.classList.remove('selected');
     }
 });
-projectesButton.addEventListener('click',function(){
-    if(!projectesButton.classList.contains('selected')){
+projectesButton.addEventListener('click', function () {
+    if (!projectesButton.classList.contains('selected')) {
         projectesButton.classList.add('selected');
         sobreMiButton.classList.remove('selected');
         contacteButton.classList.remove('selected');
     }
 });
-contacteButton.addEventListener('click',function(){
-    if(!contacteButton.classList.contains('selected')){
+contacteButton.addEventListener('click', function () {
+    if (!contacteButton.classList.contains('selected')) {
         contacteButton.classList.add('selected');
         sobreMiButton.classList.remove('selected');
         projectesButton.classList.remove('selected');
@@ -82,24 +82,24 @@ contacteButton.addEventListener('click',function(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////SUBRALLAT BOTONS NAVBAR///////////////////////////////////////////////////////////////////////////////////////
-window.addEventListener('scroll',function(){
-    if(!isInViewport(sobreMiCheck)){
-       if(!isInViewport(projectesCheck)){
-        contacteButton.classList.add('selected');
-        sobreMiButton.classList.remove('selected');
-        projectesButton.classList.remove('selected');
-       }else{
-        projectesButton.classList.add('selected');
-        sobreMiButton.classList.remove('selected');
-        contacteButton.classList.remove('selected');
-       }
-    }else{
+window.addEventListener('scroll', function () {
+    if (!isInViewport(sobreMiCheck)) {
+        if (!isInViewport(projectesCheck)) {
+            contacteButton.classList.add('selected');
+            sobreMiButton.classList.remove('selected');
+            projectesButton.classList.remove('selected');
+        } else {
+            projectesButton.classList.add('selected');
+            sobreMiButton.classList.remove('selected');
+            contacteButton.classList.remove('selected');
+        }
+    } else {
         sobreMiButton.classList.add('selected');
         projectesButton.classList.remove('selected');
         contacteButton.classList.remove('selected');
     }
 })
-  function isInViewport(elem) {
+function isInViewport(elem) {
     var distance = elem.getBoundingClientRect();
     return (
         distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0
@@ -122,6 +122,7 @@ projectes.forEach(projecte => {
     cardInfoTitol.classList.add('projecte-card-info-titol');
     cardButton.classList.add('projecte-card-button');
     cardButton.classList.add('clickable');
+    cardButton.classList.add('boto');
 
     cardImg.src = projecte.projecteImg;
     cardInfoTitol.innerHTML = projecte.projecteTitol;
@@ -140,18 +141,18 @@ projectes.forEach(projecte => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////MOUSE/////////////////////////////////////////////////////////////////////////////////////////
-document.addEventListener('mousemove', e =>{  
+document.addEventListener('mousemove', e => {
     let a = cursor.offsetHeight / 2 - 5;
-    cursor.style.left = e.pageX -a + "px";
-    cursor.style.top = e.pageY- a + "px";
+    cursor.style.left = e.pageX - a + "px";
+    cursor.style.top = e.pageY - a + "px";
 });
 const clickableElements = document.querySelectorAll(".clickable");
 clickableElements.forEach(element => {
-    element.addEventListener('mouseover', function(){
+    element.addEventListener('mouseover', function () {
         cursor.style.width = "70px";
         cursor.style.height = "70px";
     });
-    element.addEventListener('mouseout', function(){
+    element.addEventListener('mouseout', function () {
         cursor.style.width = "40px";
         cursor.style.height = "40px";
     });
@@ -159,31 +160,31 @@ clickableElements.forEach(element => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////LOGOS TEXT///////////////////////////////////////////////////////////////////////////////////////////
-logoGithub.addEventListener('mouseover', function(){
+logoGithub.addEventListener('mouseover', function () {
     textLogo.style.display = "block";
     titolLogo.innerHTML = "GITHUB";
     textLogo.innerHTML = "arnaubg99";
 });
-logoLinkedin.addEventListener('mouseover', function(){
+logoLinkedin.addEventListener('mouseover', function () {
     textLogo.style.display = "block";
     titolLogo.innerHTML = "LINKEDIN";
     textLogo.innerHTML = "Arnau Bayó Garcia";
 });
-logoEmail.addEventListener('mouseover', function(){
+logoEmail.addEventListener('mouseover', function () {
     textLogo.style.display = "block";
     titolLogo.innerHTML = "CORREO ELECTRONICO";
     textLogo.innerHTML = "arnaubayo99@gmail.com";
 });
-logoInstagram.addEventListener('mouseover', function(){
+logoInstagram.addEventListener('mouseover', function () {
     textLogo.style.display = "block";
     titolLogo.innerHTML = "INSTAGRAM";
     textLogo.innerHTML = "@arnaubg99";
 });
-logosContacte.forEach(logo =>{  
-    logo.addEventListener('mouseout', function(){
+logosContacte.forEach(logo => {
+    logo.addEventListener('mouseout', function () {
         titolLogo.innerHTML = "¡TRABAJEMOS JUNTOS!";
         textLogo.style.display = "none";
         textLogo.innerHTML = "";
-    }); 
+    });
 })
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
