@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Arnau Bayó Garcia</title>
+        <link rel="shortcut icon" href="assets/logo-blanc.png">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <div class="entrada">
+            <div id="columna1" class="columna"></div>
+            <div id="columna2" class="columna"></div>
+            <div id="columna3" class="columna">
+                <img class="logo-entrada" src="assets/logo-blanc.png"/>
+                <p class="text">Arnau Bayó Garcia</p>
+            </div>
+            <div id="columna4" class="columna"></div>
+            <div id="columna5" class="columna"></div>
+        </div>
+        <div class="cursor-container">
+            <div class="cursor"></div>
+        </div>
+          
+        <nav>
+            <div class="max-width">
+                <img id="logo-navbar" src="assets/logo-blanc.png"/>
+                <div class="opcions-nav">
+                    <a id="sobre-mi-nav-button" href="#sobre-mi" class="nav-button clickable selected">Sobre mi</a>
+                    <a id="projectes-nav-button" href="#projectes" class="nav-button clickable" >Proyectos</a>
+                    <a id="contacte-nav-button" href="#contacte" class="nav-button clickable">Contacto</a>
+                </div>
+            
+            </div>
+        </nav>
+        <main>
+            <section id="sobre-mi">
+                <div class="container sobre-mi-container">
+                    <div id="sobre-mi-check" class="div-check"></div>
+                    <div class="foto-sobre-mi-wrap wrap">
+                        <img id="foto-sobre-mi" src="assets/foto_inicial.png"/>
+                    </div>
+                    <div class="text-sobre-mi-wrap wrap">
+                        <div class="titols-seccions-wrap">
+                            <h1>ARNAU BAYO GARCIA</h1>
+                            <h2>Web Application Developer</h2>
+                        </div>
+                        <p id="text-sobre-mi" class="text">Hola! Mi nombre es Arnau Bayó Garcia, desarrollador web júnior establecido en Barcelona. Tengo conocimientos en <b class="text">HTML</b>, <b class="text">CSS</b>, <b class="text">JavaScript</b> y <b class="text">PHP</b>. Además de conocimientos en frameworks como <b class="text">Vue.js</b>, <b class="text">Bootstrap</b> o <b class="text">Symfony</b>.</br>Descarga mi <b class="text">currículum</b> actualizado aqui debajo.</p>
+                        <button id="cv-button" class="clickable" href="assets/Arnau_Bayo_Garcia_Curriculum.pdf" download>Descarga mi CV</button>
+                    </div>
+                </div>
+            </section>
+            <section id="projectes">
+                <div class="container projectes-container">
+                    <div id="projectes-check" class="div-check"></div>
+                    <div class="titols-seccions-wrap">
+                        <h2>PROYECTOS</h2>
+                        <p class="text">Aquí están mis proyectos</p>
+                    </div>
+                    <div id="projecte-cards-wrap"></div>
+                </div>
+            </section>
+            <section id="contacte">
+                <img id="logo-fons-contacte" src="assets/logo-negre.png"/>
+                <div class="container contacte-container">
+                    <div id="contacte-check" class="div-check"></div>
+                    <div class="titols-seccions-wrap">
+                        <h2>CONTACTO</h2>
+                        <p class="text">Te dejo varias formas de poder contactar aquí abajo</p>
+                    </div>
+                    <div id="contacte-wrap">
+                        <div id="logos-contacte-wrap">
+                            <a id="logo-github" class="logo-contacte" title="Github" href="https://fontawesome.com/icons/github?s=&f=brands" target="_blank"><img class="clickable logo-contacte-img" src="assets/LogosContacte/github_blanc.png"/>Github</a>
+                            <a id="logo-linkedin" class="logo-contacte" title="Linkedin: Arnau Bayó Garcia" href="https://www.linkedin.com/in/arnau-bay%C3%B3-garcia-3a405b213?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjdZtcxCsSxS1Gib2Xb5lvQ%3D%3D" target="_blank"><img class="clickable logo-contacte-img" src="assets/LogosContacte/linkedin_blanc.png"/>Linkedin</a>
+                            <a id="logo-email" class="logo-contacte" title="Correo Electrónico: arnaubayo99@gmail.com" href="mailto:arnaubayo99@gmail.com" target="_blank"><img class="clickable logo-contacte-img" src="assets/LogosContacte/email_blanc.png"/>Correo Electrónico</a>
+                            <a id="logo-instagram" class="logo-contacte" title="Instagram: @arnaubg99" href="https://instagram.com/arnaubg99?igshid=ZDdkNTZiNTM=" target="_blank"><img class="clickable logo-contacte-img" src="assets/LogosContacte/instagram_blanc.png"/>Instagram</a>
+                        </div>
+                        <div id="text-contacte-wrap" class="wrap">
+                            <h2 id="text-contacte-titol">¡TRABAJEMOS JUNTOS!</h2>
+                            <p id="text-contacte"></p>
+                        </div>
+                    </div>                   
+                </div>
+            </section>
+        </main>
+    </body>
+    <script type="text/javascript" src="javascript/javascript.js"></script>
+</html>
