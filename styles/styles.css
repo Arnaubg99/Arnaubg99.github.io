@@ -277,6 +277,7 @@ nav{
 }
 #projecte-cards-wrap::-webkit-scrollbar{
     height: 10px;
+    border-radius: 10px;
     background-color: transparent;
 }
 #projecte-cards-wrap::-webkit-scrollbar-thumb {
