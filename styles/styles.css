@@ -574,10 +574,6 @@ nav{
     #text-sobre-mi{
         font-size: 1.5rem;
     }
-    #projecte-cards-wrap{
-        padding: 0;
-        border: 0;
-    }
     
 }
 @media (max-height:500px) {
@@ -590,6 +586,10 @@ nav{
     #foto-sobre-mi{
         position: sticky;
         top: 10%;
+    }
+    #projecte-cards-wrap{
+        padding: 0;
+        border: 0;
     }
 }
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -610,6 +610,10 @@ nav{
     }
     #projecte-cards-wrap::-webkit-scrollbar{
         background-color: rgba(113, 113, 113, 0.2);
+    }
+    #projecte-cards-wrap{
+        padding: 0;
+        border: 0;
     }
 }
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
