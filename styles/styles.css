@@ -570,8 +570,11 @@ nav{
         height: 325px;
         min-width: 250px;
     }
+    #text-sobre-mi{
+        font-size: 1.5rem;
+    }
 }
-@media (max-height:550px) {
+@media (max-height:500px) {
     section{
         height: 250vh;
     }
