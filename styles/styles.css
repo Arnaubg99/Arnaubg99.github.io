@@ -573,6 +573,10 @@ nav{
     #text-sobre-mi{
         font-size: 1.5rem;
     }
+    #projecte-cards-wrap{
+        padding: 0;
+    }
+    
 }
 @media (max-height:500px) {
     section{
@@ -602,5 +606,6 @@ nav{
     #projecte-cards-wrap::-webkit-scrollbar-thumb {
         background-color: rgba(255, 255, 255, 0.2);;
     }
+
 }
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
