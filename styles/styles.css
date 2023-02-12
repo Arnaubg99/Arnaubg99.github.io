@@ -575,6 +575,7 @@ nav{
     }
     #projecte-cards-wrap{
         padding: 0;
+        border: 0;
     }
     
 }
