@@ -420,6 +420,7 @@ nav{
     position: fixed;
     flex-direction: row;
     animation: 1.2s linear 2.5s desapareixerOpacity;
+    
 }
 .columna{
     width: 20%;
