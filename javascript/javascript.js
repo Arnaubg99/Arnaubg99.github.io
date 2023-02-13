@@ -22,28 +22,32 @@ const titolLogo = document.querySelector("#text-contacte-titol");
 const textLogo = document.querySelector("#text-contacte");
 const projectes = [
     {
+        id: 0,
         projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
         projecteTitol: "Camino al mercado",
         projecteInfo: "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: ""
+        projecteLink: "https://github.com/Arnaubg99/camino-al-mercado"
     },
     {
+        id: 1,
         projecteImg: "assets/CapturesProjectes/calculadora.jpg",
         projecteTitol: "Calculadora",
         projecteInfo: "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: ""
+        projecteLink: "https://github.com/Arnaubg99/calculadora"
     },
     {
+        id: 2,
         projecteImg: "assets/CapturesProjectes/tribut.jpg",
         projecteTitol: "Página tributo",
         projecteInfo: "Proyecto hecho con HTML y CSS.",
-        projecteLink: ""
+        projecteLink: "https://github.com/Arnaubg99/pagina-tributo"
     },
     {
+        id: 3,
         projecteImg: "assets/CapturesProjectes/formulari.jpg",
         projecteTitol: "Ejemplo de formulario",
         projecteInfo: "Proyecto hecho con HTML y CSS.",
-        projecteLink: ""
+        projecteLink: "https://github.com/Arnaubg99/formulario-de-ejemplo"
     },
 ];
 
@@ -114,7 +118,7 @@ projectes.forEach(projecte => {
     let cardInfoWrap = document.createElement("div");
     let cardInfoTitol = document.createElement("h3");
     let cardInfop = document.createElement("p");
-    let cardButton = document.createElement("button");
+    let cardButton = document.createElement("a");
 
     card.classList.add('projecte-card');
     cardImg.classList.add('projecte-card-img');
@@ -128,6 +132,8 @@ projectes.forEach(projecte => {
     cardInfoTitol.innerHTML = projecte.projecteTitol;
     cardInfop.innerHTML = projecte.projecteInfo;
     cardButton.innerHTML = "Ver";
+    cardButton.href = projecte.projecteLink;
+    cardButton.target ="_blank";
 
     cardInfoWrap.appendChild(cardInfoTitol);
     cardInfoWrap.appendChild(cardInfop);
