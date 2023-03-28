@@ -20,33 +20,53 @@ const logoInstagram = document.querySelector("#logo-instagram");
 const logosContacte = document.querySelectorAll(".logo-contacte");
 const titolLogo = document.querySelector("#text-contacte-titol");
 const textLogo = document.querySelector("#text-contacte");
+const modalProjecte = document.querySelector("#modal-projecte-wrap");
+const modalTitol = document.querySelector("#modal-text");
+const modalImg = document.querySelector("#modal-img");
+const modalDescripcio = document.querySelector("#modal-descripcio");
+const modalParaulesClau = document.querySelector("#modal-paraules-clau");
+const modalBoto= document.querySelector("#modal-boto");
+const modalCreu = document.querySelector("#creu");
+
 const projectes = [
     {
         id: 0,
-        projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
-        projecteTitol: "Camino al mercado",
-        projecteInfo: "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: "https://github.com/Arnaubg99/camino-al-mercado"
+        projecteImg: "assets/CapturesProjectes/app-tiempo.jpg",
+        projecteTitol: "App Meteorológica",
+        projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIS de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica...\n 100% responsive adaptado a todo tipo de dispositivos.",
+        projecteParaulesClau: "Proyecto hecho con Angular, TypeScript, HTML y CSS.",
+        projecteLink: "https://github.com/Arnaubg99/aplicacion-meteorologica"
     },
     {
         id: 1,
-        projecteImg: "assets/CapturesProjectes/calculadora.jpg",
-        projecteTitol: "Calculadora",
-        projecteInfo: "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: "https://github.com/Arnaubg99/calculadora"
+        projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
+        projecteTitol: "Camino al mercado",
+        projecteDescripcio: "El objetivo de este juego es conducir el camión de camino al mercado, pero cuidado, los coches de la carretera van muy rápido y debes evitar chocar con ellos para seguir con vida. De vez en cuando aparecen corazones, intenta cojerlos para recuperar vidas, también intenta cojer los escudos que te vuelven invulnerable durante un tiempo, y ten en cuenta que los coches van aumentando de velocidad.",
+        projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript.",
+        projecteLink: "https://github.com/Arnaubg99/camino-al-mercado"
     },
     {
         id: 2,
-        projecteImg: "assets/CapturesProjectes/tribut.jpg",
-        projecteTitol: "Página tributo",
-        projecteInfo: "Proyecto hecho con HTML y CSS.",
-        projecteLink: "https://github.com/Arnaubg99/pagina-tributo"
+        projecteImg: "assets/CapturesProjectes/calculadora.jpg",
+        projecteTitol: "Calculadora",
+        projecteDescripcio: "Calculadora capaz de hacer sumas, restas, multiplicaciones y divisiones.",
+        projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript.",
+        projecteLink: "https://github.com/Arnaubg99/calculadora"
     },
     {
         id: 3,
+        projecteImg: "assets/CapturesProjectes/tribut.jpg",
+        projecteTitol: "Página tributo",
+        projecteDescripcio: "Página con datos de una personalidad icónica.",
+        projecteParaulesClau: "Proyecto hecho con HTML y CSS.",
+        projecteLink: "https://github.com/Arnaubg99/pagina-tributo"
+    },
+    {
+        id: 4,
         projecteImg: "assets/CapturesProjectes/formulari.jpg",
         projecteTitol: "Ejemplo de formulario",
-        projecteInfo: "Proyecto hecho con HTML y CSS.",
+        projecteDescripcio: "Formulario de ejemplo con diversos tipos de campos.",
+        projecteParaulesClau: "Proyecto hecho con HTML y CSS.",
         projecteLink: "https://github.com/Arnaubg99/formulario-de-ejemplo"
     },
 ];
@@ -130,10 +150,10 @@ projectes.forEach(projecte => {
 
     cardImg.src = projecte.projecteImg;
     cardInfoTitol.innerHTML = projecte.projecteTitol;
-    cardInfop.innerHTML = projecte.projecteInfo;
+    cardInfop.innerHTML = projecte.projecteParaulesClau;
     cardButton.innerHTML = "Ver";
-    cardButton.href = projecte.projecteLink;
-    cardButton.target ="_blank";
+    
+    cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteImg, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
 
     cardInfoWrap.appendChild(cardInfoTitol);
     cardInfoWrap.appendChild(cardInfop);
@@ -143,25 +163,6 @@ projectes.forEach(projecte => {
     card.appendChild(cardButton);
 
     projecteCardsWrap.appendChild(card);
-});
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//////////////////////MOUSE/////////////////////////////////////////////////////////////////////////////////////////
-document.addEventListener('mousemove', e => {
-    let a = cursor.offsetHeight / 2 - 5;
-    cursor.style.left = e.pageX - a + "px";
-    cursor.style.top = e.pageY - a + "px";
-});
-const clickableElements = document.querySelectorAll(".clickable");
-clickableElements.forEach(element => {
-    element.addEventListener('mouseover', function () {
-        cursor.style.width = "70px";
-        cursor.style.height = "70px";
-    });
-    element.addEventListener('mouseout', function () {
-        cursor.style.width = "40px";
-        cursor.style.height = "40px";
-    });
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -193,4 +194,43 @@ logosContacte.forEach(logo => {
         textLogo.innerHTML = "";
     });
 })
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////MODAL//////////////////////////////////////////////////////////////////////////////////////////
+modalBoto.classList.add("clickable")
+modalCreu.classList.add("clickable")
+
+modalCreu.addEventListener("click", function(){
+    modalProjecte.style.display = "none"
+    html.style.overflowY = "auto";
+})
+
+function obrirModal(titol, img, descripcio, paraulesClau, link){
+    modalProjecte.style.display = "flex"
+    html.style.overflowY = "hidden";
+    modalTitol.innerHTML = titol.toUpperCase()
+    modalImg.src = img
+    modalDescripcio.innerHTML = descripcio
+    modalParaulesClau.innerHTML = paraulesClau
+    modalBoto.href = link
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////MOUSE/////////////////////////////////////////////////////////////////////////////////////////
+document.addEventListener('mousemove', e => {
+    let a = cursor.offsetHeight / 2 - 5;
+    cursor.style.left = e.pageX - a + "px";
+    cursor.style.top = e.pageY - a + "px";
+});
+const clickableElements = document.querySelectorAll(".clickable");
+clickableElements.forEach(element => {
+    element.addEventListener('mouseover', function () {
+        cursor.style.width = "70px";
+        cursor.style.height = "70px";
+    });
+    element.addEventListener('mouseout', function () {
+        cursor.style.width = "40px";
+        cursor.style.height = "40px";
+    });
+});
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
