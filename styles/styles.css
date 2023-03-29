@@ -294,7 +294,7 @@ nav{
 }
 .projecte-card{
     width: 300px;
-    height: 400px;
+    height: 380px;
     min-width: 300px;
     border-radius: 10px;
     padding: 15px 10px;
@@ -670,7 +670,7 @@ nav{
     }
     .projecte-card{
         width: 250px;
-        height: 325px;
+        height: 350px;
         min-width: 250px;
     }
     #text-sobre-mi{
