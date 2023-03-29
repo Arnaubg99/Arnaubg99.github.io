@@ -33,7 +33,7 @@ const projectes = [
         id: 0,
         projecteImg: "assets/CapturesProjectes/app-tiempo.jpg",
         projecteTitol: "App Meteorológica",
-        projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIS de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica... 100% responsive adaptada a todo tipo de dispositivos.",
+        projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIs de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica... 100% responsive adaptada a todo tipo de dispositivos.",
         projecteParaulesClau: "Proyecto hecho con Angular, Bootstrap, TypeScript, HTML y CSS.",
         projecteLink: "https://github.com/Arnaubg99/aplicacion-meteorologica"
     },
