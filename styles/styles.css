@@ -294,7 +294,7 @@ nav{
 }
 .projecte-card{
     width: 300px;
-    height: 375px;
+    height: 390px;
     min-width: 300px;
     border-radius: 10px;
     padding: 15px 10px;
@@ -587,6 +587,11 @@ nav{
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* //////////////////MEDIA RESPONSIVE//////////////////////////////////////////////////////////////////////////////// */
+@media (max-width:1200px) {
+    #modal-projecte{
+        width: 80%;
+    }
+}
 @media (max-width:1050px) {
     h1{
         font-size: 3.8rem;
@@ -643,6 +648,10 @@ nav{
     }
     #foto-fons-sobre-mi{
         display: block;
+    }
+    #modal-projecte{
+        width: 100%;
+        height: 100vh;
     }
 }
 @media (max-width:450px) {
