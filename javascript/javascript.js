@@ -33,12 +33,20 @@ const projectes = [
         id: 0,
         projecteImg: "assets/CapturesProjectes/app-tiempo.jpg",
         projecteTitol: "App Meteorológica",
-        projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIS de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica...\n 100% responsive adaptado a todo tipo de dispositivos.",
+        projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIS de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica... 100% responsive adaptada a todo tipo de dispositivos.",
         projecteParaulesClau: "Proyecto hecho con Angular, Bootstrap, TypeScript, HTML y CSS.",
         projecteLink: "https://github.com/Arnaubg99/aplicacion-meteorologica"
     },
     {
         id: 1,
+        projecteImg: "assets/CapturesProjectes/portafolio.png",
+        projecteTitol: "Portafolio Web",
+        projecteDescripcio: "Web dónde muestro quien soy, mi currículum, aptitudes, proyectos y formas de contacto. 100% responsive adaptada a todo tipo de dispositivos.",
+        projecteParaulesClau:  "Proyecto hecho con HTML, CSS y JavaScript.",
+        projecteLink: "https://github.com/Arnaubg99/Arnaubg99.github.io"
+    },
+    {
+        id: 2,
         projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
         projecteTitol: "Camino al mercado",
         projecteDescripcio: "El objetivo de este juego es conducir el camión de camino al mercado, pero cuidado, los coches de la carretera van muy rápido y debes evitar chocar con ellos para seguir con vida. De vez en cuando aparecen corazones, intenta cojerlos para recuperar vidas, también intenta cojer los escudos que te vuelven invulnerable durante un tiempo, y ten en cuenta que los coches van aumentando de velocidad.",
@@ -46,7 +54,7 @@ const projectes = [
         projecteLink: "https://github.com/Arnaubg99/camino-al-mercado"
     },
     {
-        id: 2,
+        id: 3,
         projecteImg: "assets/CapturesProjectes/calculadora.jpg",
         projecteTitol: "Calculadora",
         projecteDescripcio: "Calculadora capaz de hacer sumas, restas, multiplicaciones y divisiones.",
@@ -54,7 +62,7 @@ const projectes = [
         projecteLink: "https://github.com/Arnaubg99/calculadora"
     },
     {
-        id: 3,
+        id: 4,
         projecteImg: "assets/CapturesProjectes/tribut.jpg",
         projecteTitol: "Página tributo",
         projecteDescripcio: "Página con datos de una personalidad icónica.",
@@ -62,7 +70,7 @@ const projectes = [
         projecteLink: "https://github.com/Arnaubg99/pagina-tributo"
     },
     {
-        id: 4,
+        id: 5,
         projecteImg: "assets/CapturesProjectes/formulari.jpg",
         projecteTitol: "Ejemplo de formulario",
         projecteDescripcio: "Formulario de ejemplo con diversos tipos de campos.",
