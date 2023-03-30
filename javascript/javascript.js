@@ -22,7 +22,7 @@ const titolLogo = document.querySelector("#text-contacte-titol");
 const textLogo = document.querySelector("#text-contacte");
 const modalProjecte = document.querySelector("#modal-projecte-wrap");
 const modalTitol = document.querySelector("#modal-text");
-const modalImg = document.querySelector("#modal-img");
+const modalVideo = document.querySelector("#modal-video");
 const modalDescripcio = document.querySelector("#modal-descripcio");
 const modalParaulesClau = document.querySelector("#modal-paraules-clau");
 const modalBoto= document.querySelector("#modal-boto");
@@ -32,6 +32,7 @@ const projectes = [
     {
         id: 0,
         projecteImg: "assets/CapturesProjectes/app-tiempo.jpg",
+        projecteVideo: "assets/VideosProjectes/app_meteorologica.mp4",
         projecteTitol: "App Meteorológica",
         projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIs de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica... 100% responsive adaptada a todo tipo de dispositivos.",
         projecteParaulesClau: "Proyecto hecho con Angular, Bootstrap, TypeScript, HTML y CSS.",
@@ -40,6 +41,7 @@ const projectes = [
     {
         id: 1,
         projecteImg: "assets/CapturesProjectes/portafolio.png",
+        projecteVideo: "assets/VideosProjectes/portafolio.mp4",
         projecteTitol: "Portafolio Web",
         projecteDescripcio: "Web dónde muestro quien soy, mi currículum, aptitudes, proyectos y formas de contacto. 100% responsive adaptada a todo tipo de dispositivos.",
         projecteParaulesClau:  "Proyecto hecho con HTML, CSS y JavaScript.",
@@ -48,6 +50,7 @@ const projectes = [
     {
         id: 2,
         projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
+        projecteVideo: "assets/VideosProjectes/cami_al_mercat.mp4",
         projecteTitol: "Camino al mercado",
         projecteDescripcio: "El objetivo de este juego es conducir el camión de camino al mercado, pero cuidado, los coches de la carretera van muy rápido y debes evitar chocar con ellos para seguir con vida. De vez en cuando aparecen corazones, intenta cojerlos para recuperar vidas, también intenta cojer los escudos que te vuelven invulnerable durante un tiempo, y ten en cuenta que los coches van aumentando de velocidad.",
         projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript.",
@@ -56,6 +59,7 @@ const projectes = [
     {
         id: 3,
         projecteImg: "assets/CapturesProjectes/calculadora.jpg",
+        projecteVideo: "assets/VideosProjectes/calculadora.mp4",
         projecteTitol: "Calculadora",
         projecteDescripcio: "Calculadora capaz de hacer sumas, restas, multiplicaciones y divisiones.",
         projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript.",
@@ -64,6 +68,7 @@ const projectes = [
     {
         id: 4,
         projecteImg: "assets/CapturesProjectes/tribut.jpg",
+        projecteVideo: "assets/VideosProjectes/pagina_tribut.mp4",
         projecteTitol: "Página tributo",
         projecteDescripcio: "Página con datos de una personalidad icónica.",
         projecteParaulesClau: "Proyecto hecho con HTML y CSS.",
@@ -72,6 +77,7 @@ const projectes = [
     {
         id: 5,
         projecteImg: "assets/CapturesProjectes/formulari.jpg",
+        projecteVideo: "assets/VideosProjectes/formulari.mp4",
         projecteTitol: "Ejemplo de formulario",
         projecteDescripcio: "Formulario de ejemplo con diversos tipos de campos.",
         projecteParaulesClau: "Proyecto hecho con HTML y CSS.",
@@ -161,7 +167,7 @@ projectes.forEach(projecte => {
     cardInfop.innerHTML = projecte.projecteParaulesClau;
     cardButton.innerHTML = "Ver";
     
-    cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteImg, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
+    cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
 
     cardInfoWrap.appendChild(cardInfoTitol);
     cardInfoWrap.appendChild(cardInfop);
@@ -213,11 +219,11 @@ modalCreu.addEventListener("click", function(){
     html.style.overflowY = "auto";
 })
 
-function obrirModal(titol, img, descripcio, paraulesClau, link){
+function obrirModal(titol, video, descripcio, paraulesClau, link){
     modalProjecte.style.display = "flex"
     html.style.overflowY = "hidden";
     modalTitol.innerHTML = titol.toUpperCase()
-    modalImg.src = img
+    modalVideo.src = video
     modalDescripcio.innerHTML = descripcio
     modalParaulesClau.innerHTML = paraulesClau
     modalBoto.href = link
