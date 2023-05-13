@@ -40,21 +40,21 @@ const projectes = [
     },
     {
         id: 1,
-        projecteImg: "assets/CapturesProjectes/portafolio.png",
-        projecteVideo: "assets/VideosProjectes/portafolio.mp4",
-        projecteTitol: "Portafolio Web",
-        projecteDescripcio: "Web dónde muestro quien soy, mi currículum, aptitudes, proyectos y formas de contacto. 100% responsive adaptada a todo tipo de dispositivos.",
-        projecteParaulesClau:  "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: "https://github.com/Arnaubg99/Arnaubg99.github.io"
-    },
-    {
-        id: 2,
         projecteImg: "assets/CapturesProjectes/productes-snow.jpg",
         projecteVideo: "assets/VideosProjectes/productes-snow.mp4",
         projecteTitol: "Listado de Productos",
         projecteDescripcio: "Muesta un listado de productos de snowboard recibios desde una API a través de un servidor Node.js. Muestra datos de precio, descripción, variantes e imágenes del producto.",
         projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript y Node.js.",
         projecteLink: "https://github.com/Arnaubg99/PruebaFantasticFy"
+    },
+    {
+        id: 2,
+        projecteImg: "assets/CapturesProjectes/portafolio.png",
+        projecteVideo: "assets/VideosProjectes/portafolio.mp4",
+        projecteTitol: "Portafolio Web",
+        projecteDescripcio: "Web dónde muestro quien soy, mi currículum, aptitudes, proyectos y formas de contacto. 100% responsive adaptada a todo tipo de dispositivos.",
+        projecteParaulesClau:  "Proyecto hecho con HTML, CSS y JavaScript.",
+        projecteLink: "https://github.com/Arnaubg99/Arnaubg99.github.io"
     },
     {
         id: 3,
