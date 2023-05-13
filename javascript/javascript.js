@@ -49,6 +49,15 @@ const projectes = [
     },
     {
         id: 2,
+        projecteImg: "assets/CapturesProjectes/productes-snow.jpg",
+        projecteVideo: "assets/VideosProjectes/productes-snow.mp4",
+        projecteTitol: "Listado de Productos",
+        projecteDescripcio: "Muesta un listado de productos de snowboard recibios desde una API a través de un servidor Node.js. Muestra datos de precio, descripción, variantes e imágenes del producto.",
+        projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript y Node.js.",
+        projecteLink: "https://github.com/Arnaubg99/PruebaFantasticFy"
+    },
+    {
+        id: 3,
         projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
         projecteVideo: "assets/VideosProjectes/cami_al_mercat.mp4",
         projecteTitol: "Camino al mercado",
@@ -57,7 +66,7 @@ const projectes = [
         projecteLink: "https://github.com/Arnaubg99/camino-al-mercado"
     },
     {
-        id: 3,
+        id: 4,
         projecteImg: "assets/CapturesProjectes/calculadora.jpg",
         projecteVideo: "assets/VideosProjectes/calculadora.mp4",
         projecteTitol: "Calculadora",
@@ -66,7 +75,7 @@ const projectes = [
         projecteLink: "https://github.com/Arnaubg99/calculadora"
     },
     {
-        id: 4,
+        id: 5,
         projecteImg: "assets/CapturesProjectes/tribut.jpg",
         projecteVideo: "assets/VideosProjectes/pagina_tribut.mp4",
         projecteTitol: "Página tributo",
@@ -75,7 +84,7 @@ const projectes = [
         projecteLink: "https://github.com/Arnaubg99/pagina-tributo"
     },
     {
-        id: 5,
+        id: 6,
         projecteImg: "assets/CapturesProjectes/formulari.jpg",
         projecteVideo: "assets/VideosProjectes/formulari.mp4",
         projecteTitol: "Ejemplo de formulario",
