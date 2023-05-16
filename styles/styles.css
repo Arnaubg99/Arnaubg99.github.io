@@ -658,6 +658,9 @@ nav{
     }
 }
 @media (max-width:450px) {
+    #logo-navbar{
+        height: 55%;
+    }
     .nav-button{
          font-size: 1.6rem;
     }
