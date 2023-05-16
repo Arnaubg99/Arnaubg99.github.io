@@ -80,8 +80,19 @@ let projectes;
         crearElement('p', undefined, undefined, projecte.projecteParaulesClau, cardInfoWrap, false);
         const cardButton = crearElement('a', ['projecte-card-button', 'clickable', 'boto'], undefined, 'Ver', card, true);
     
-        cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
+        cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink)); 
     });
+
+    //AFEGIR EFECTE AMPLIAR/REDUIR ESFERA ALS ELEMENT QUE CONTENEN LA CLASSE CLICKABLE
+    const clickableElements = document.querySelectorAll(".clickable");
+    clickableElements.forEach(element => {
+    element.addEventListener('mouseover', () => {
+        modificarWidthHeigth(cursor, '70px');
+    });
+    element.addEventListener('mouseout', () => {
+        modificarWidthHeigth(cursor, '40px');
+    });
+});
 })();
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -122,13 +133,5 @@ document.addEventListener('mousemove', element => {
     cursor.style.left = element.pageX - a + "px";
     cursor.style.top = element.pageY - a + "px";
 });
-const clickableElements = document.querySelectorAll(".clickable");
-clickableElements.forEach(element => {
-    element.addEventListener('mouseover', () => {
-        modificarWidthHeigth(cursor, '70px');
-    });
-    element.addEventListener('mouseout', () => {
-        modificarWidthHeigth(cursor, '40px');
-    });
-});
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
