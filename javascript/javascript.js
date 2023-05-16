@@ -82,7 +82,7 @@ let projectes;
     
         cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
     });
-  })();
+})();
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
