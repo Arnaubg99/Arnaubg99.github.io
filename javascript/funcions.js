@@ -1,7 +1,8 @@
+ //FUNCIO PER REBRE TOTS ELS PROJECTES DE L'ARXIU JSON
  async function rebreProjectesJSON(){
     try {
-        let respuesta =  await fetch('javascript/projectes.json');
-        return  respuesta.json();
+        let resposta =  await fetch('javascript/projectes.json');
+        return  resposta.json();
     }catch (error) {
         return error;
     }
