@@ -28,193 +28,80 @@ const modalParaulesClau = document.querySelector("#modal-paraules-clau");
 const modalBoto= document.querySelector("#modal-boto");
 const modalCreu = document.querySelector("#creu");
 
-const projectes = [
-    {
-        id: 0,
-        projecteImg: "assets/CapturesProjectes/app-tiempo.jpg",
-        projecteVideo: "assets/VideosProjectes/app_meteorologica.mp4",
-        projecteTitol: "App Meteorológica",
-        projecteDescripcio: "Muestra los datos meteorológicos recibidos mediante APIs de España clasificado por provincias y municipios. Muestra datos de temperatura, estado del cielo, pronóstico de los próximos días, posición geográfica... 100% responsive adaptada a todo tipo de dispositivos.",
-        projecteParaulesClau: "Proyecto hecho con Angular, Bootstrap, TypeScript, HTML y CSS.",
-        projecteLink: "https://github.com/Arnaubg99/aplicacion-meteorologica"
-    },
-    {
-        id: 1,
-        projecteImg: "assets/CapturesProjectes/productes-snow.jpg",
-        projecteVideo: "assets/VideosProjectes/productes-snow.mp4",
-        projecteTitol: "Listado de Productos",
-        projecteDescripcio: "Muesta un listado de productos de snowboard recibios desde una API a través de un servidor Node.js. Muestra datos de precio, descripción, variantes e imágenes del producto.",
-        projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript y Node.js.",
-        projecteLink: "https://github.com/Arnaubg99/PruebaFantasticFy"
-    },
-    {
-        id: 2,
-        projecteImg: "assets/CapturesProjectes/portafolio.png",
-        projecteVideo: "assets/VideosProjectes/portafolio.mp4",
-        projecteTitol: "Portafolio Web",
-        projecteDescripcio: "Web dónde muestro quien soy, mi currículum, aptitudes, proyectos y formas de contacto. 100% responsive adaptada a todo tipo de dispositivos.",
-        projecteParaulesClau:  "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: "https://github.com/Arnaubg99/Arnaubg99.github.io"
-    },
-    {
-        id: 3,
-        projecteImg: "assets/CapturesProjectes/cami-al-mercat.jpg",
-        projecteVideo: "assets/VideosProjectes/cami_al_mercat.mp4",
-        projecteTitol: "Camino al mercado",
-        projecteDescripcio: "El objetivo de este juego es conducir el camión de camino al mercado, pero cuidado, los coches de la carretera van muy rápido y debes evitar chocar con ellos para seguir con vida. De vez en cuando aparecen corazones, intenta cojerlos para recuperar vidas, también intenta cojer los escudos que te vuelven invulnerable durante un tiempo, y ten en cuenta que los coches van aumentando de velocidad.",
-        projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: "https://github.com/Arnaubg99/camino-al-mercado"
-    },
-    {
-        id: 4,
-        projecteImg: "assets/CapturesProjectes/calculadora.jpg",
-        projecteVideo: "assets/VideosProjectes/calculadora.mp4",
-        projecteTitol: "Calculadora",
-        projecteDescripcio: "Calculadora capaz de hacer sumas, restas, multiplicaciones y divisiones.",
-        projecteParaulesClau: "Proyecto hecho con HTML, CSS y JavaScript.",
-        projecteLink: "https://github.com/Arnaubg99/calculadora"
-    },
-    {
-        id: 5,
-        projecteImg: "assets/CapturesProjectes/tribut.jpg",
-        projecteVideo: "assets/VideosProjectes/pagina_tribut.mp4",
-        projecteTitol: "Página tributo",
-        projecteDescripcio: "Página con datos de una personalidad icónica.",
-        projecteParaulesClau: "Proyecto hecho con HTML y CSS.",
-        projecteLink: "https://github.com/Arnaubg99/pagina-tributo"
-    },
-    {
-        id: 6,
-        projecteImg: "assets/CapturesProjectes/formulari.jpg",
-        projecteVideo: "assets/VideosProjectes/formulari.mp4",
-        projecteTitol: "Ejemplo de formulario",
-        projecteDescripcio: "Formulario de ejemplo con diversos tipos de campos.",
-        projecteParaulesClau: "Proyecto hecho con HTML y CSS.",
-        projecteLink: "https://github.com/Arnaubg99/formulario-de-ejemplo"
-    },
-];
-
 //////////////////////////ANIMACIO ENTRADA////////////////////////////////////////////////////////////////////////////////////////
-setTimeout(function () {
+setTimeout(() => {
     entrada.style.display = "none"; 
     html.style.overflowY = "auto";
-    // if(!window.matchMedia("(any-hover: none)").matches) {
-    //     cursor.style.display = "block";
-    // }
 }, 3700);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////BOTONS NAVBAR//////////////////////////////////////////////////////////////////////////////////////////
-sobreMiButton.addEventListener('click', function () {
+sobreMiButton.addEventListener('click', () => {
     if (!sobreMiButton.classList.contains('selected')) {
-        sobreMiButton.classList.add('selected');
-        projectesButton.classList.remove('selected');
-        contacteButton.classList.remove('selected');
+        afegirTreureClases(sobreMiButton, [projectesButton, contacteButton], 'selected')
     }
 });
-projectesButton.addEventListener('click', function () {
+projectesButton.addEventListener('click', () => {
     if (!projectesButton.classList.contains('selected')) {
-        projectesButton.classList.add('selected');
-        sobreMiButton.classList.remove('selected');
-        contacteButton.classList.remove('selected');
+        afegirTreureClases(projectesButton, [sobreMiButton, contacteButton], 'selected')
     }
 });
-contacteButton.addEventListener('click', function () {
+contacteButton.addEventListener('click', () => {
     if (!contacteButton.classList.contains('selected')) {
-        contacteButton.classList.add('selected');
-        sobreMiButton.classList.remove('selected');
-        projectesButton.classList.remove('selected');
+        afegirTreureClases(contacteButton, [sobreMiButton, projectesButton], 'selected')
     }
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////SUBRALLAT BOTONS NAVBAR///////////////////////////////////////////////////////////////////////////////////////
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
     if (!isInViewport(sobreMiCheck)) {
         if (!isInViewport(projectesCheck)) {
-            contacteButton.classList.add('selected');
-            sobreMiButton.classList.remove('selected');
-            projectesButton.classList.remove('selected');
+            afegirTreureClases(contacteButton, [sobreMiButton, projectesButton], 'selected')
         } else {
-            projectesButton.classList.add('selected');
-            sobreMiButton.classList.remove('selected');
-            contacteButton.classList.remove('selected');
+            afegirTreureClases(projectesButton, [sobreMiButton, contacteButton], 'selected')
         }
     } else {
-        sobreMiButton.classList.add('selected');
-        projectesButton.classList.remove('selected');
-        contacteButton.classList.remove('selected');
+        afegirTreureClases(sobreMiButton, [projectesButton, contacteButton], 'selected')
     }
 })
-function isInViewport(elem) {
-    var distance = elem.getBoundingClientRect();
-    return (
-        distance.top < (window.innerHeight || document.documentElement.clientHeight) && distance.bottom > 0
-    );
-}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////PROJECTES CARDS//////////////////////////////////////////////////////////////////////////////////
-projectes.forEach(projecte => {
-    let card = document.createElement("div");
-    let cardImg = document.createElement("img");
-    let cardInfoWrap = document.createElement("div");
-    let cardInfoTitol = document.createElement("h3");
-    let cardInfop = document.createElement("p");
-    let cardButton = document.createElement("a");
-
-    card.classList.add('projecte-card');
-    cardImg.classList.add('projecte-card-img');
-    cardInfoWrap.classList.add('projecte-card-info');
-    cardInfoTitol.classList.add('projecte-card-info-titol');
-    cardButton.classList.add('projecte-card-button');
-    cardButton.classList.add('clickable');
-    cardButton.classList.add('boto');
-
-    cardImg.src = projecte.projecteImg;
-    cardInfoTitol.innerHTML = projecte.projecteTitol;
-    cardInfop.innerHTML = projecte.projecteParaulesClau;
-    cardButton.innerHTML = "Ver";
+let projectes;
+(async () => {
+    let resposta = await rebreProjectesJSON();
+    projectes = resposta.projectes;
+    projectes.forEach(projecte => {
+        const card = crearElement('div', ['projecte-card'], undefined, undefined, projecteCardsWrap, true);
+        crearElement('img', ['projecte-card-img'],[atribut1={clau: 'src', valor: projecte.projecteImg}], undefined, card, true);
+        const cardInfoWrap = crearElement('div', ['projecte-card-info'], undefined, undefined, card, true);
+        crearElement('h3', ['projecte-card-info-titol'], undefined, projecte.projecteTitol, cardInfoWrap, true);
+        crearElement('p', undefined, undefined, projecte.projecteParaulesClau, cardInfoWrap, false);
+        const cardButton = crearElement('a', ['projecte-card-button', 'clickable', 'boto'], undefined, 'Ver', card, true);
     
-    cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
+        cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink));
+    });
+  })();
 
-    cardInfoWrap.appendChild(cardInfoTitol);
-    cardInfoWrap.appendChild(cardInfop);
-
-    card.appendChild(cardImg);
-    card.appendChild(cardInfoWrap);
-    card.appendChild(cardButton);
-
-    projecteCardsWrap.appendChild(card);
-});
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////LOGOS TEXT///////////////////////////////////////////////////////////////////////////////////////////
-logoGithub.addEventListener('mouseover', function () {
-    textLogo.style.display = "block";
-    titolLogo.innerHTML = "GITHUB";
-    textLogo.innerHTML = "arnaubg99";
+logoGithub.addEventListener('mouseover', () => {
+    cambiarTextContacte('block', 'GITHUB', 'arnaubg99');
 });
-logoLinkedin.addEventListener('mouseover', function () {
-    textLogo.style.display = "block";
-    titolLogo.innerHTML = "LINKEDIN";
-    textLogo.innerHTML = "Arnau Bayó Garcia";
+logoLinkedin.addEventListener('mouseover', () => {
+    cambiarTextContacte('block', 'LINKEDIN', 'Arnau Bayó Garcia');
 });
-logoEmail.addEventListener('mouseover', function () {
-    textLogo.style.display = "block";
-    titolLogo.innerHTML = "CORREO ELECTRONICO";
-    textLogo.innerHTML = "arnaubayo99@gmail.com";
+logoEmail.addEventListener('mouseover', () => {
+    cambiarTextContacte('block', 'CORREO ELECTRONICO', 'arnaubayo99@gmail.com');
 });
-logoInstagram.addEventListener('mouseover', function () {
-    textLogo.style.display = "block";
-    titolLogo.innerHTML = "INSTAGRAM";
-    textLogo.innerHTML = "@arnaubg99";
+logoInstagram.addEventListener('mouseover', () => {
+    cambiarTextContacte('block', 'INSTAGRAM', '@arnaubg99');
 });
 logosContacte.forEach(logo => {
-    logo.addEventListener('mouseout', function () {
-        titolLogo.innerHTML = "¡TRABAJEMOS JUNTOS!";
-        textLogo.style.display = "none";
-        textLogo.innerHTML = "";
+    logo.addEventListener('mouseout', () => {
+    cambiarTextContacte('none', '¡TRABAJEMOS JUNTOS!', '');
     });
 })
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -223,20 +110,10 @@ logosContacte.forEach(logo => {
 modalBoto.classList.add("clickable")
 modalCreu.classList.add("clickable")
 
-modalCreu.addEventListener("click", function(){
+modalCreu.addEventListener("click", () =>{
     modalProjecte.style.display = "none"
     html.style.overflowY = "auto";
 })
-
-function obrirModal(titol, video, descripcio, paraulesClau, link){
-    modalProjecte.style.display = "flex"
-    html.style.overflowY = "hidden";
-    modalTitol.innerHTML = titol.toUpperCase()
-    modalVideo.src = video
-    modalDescripcio.innerHTML = descripcio
-    modalParaulesClau.innerHTML = paraulesClau
-    modalBoto.href = link
-}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////MOUSE/////////////////////////////////////////////////////////////////////////////////////////
@@ -247,13 +124,11 @@ document.addEventListener('mousemove', e => {
 });
 const clickableElements = document.querySelectorAll(".clickable");
 clickableElements.forEach(element => {
-    element.addEventListener('mouseover', function () {
-        cursor.style.width = "70px";
-        cursor.style.height = "70px";
+    element.addEventListener('mouseover', () => {
+        modificarWidthHeigth(cursor, '70px');
     });
-    element.addEventListener('mouseout', function () {
-        cursor.style.width = "40px";
-        cursor.style.height = "40px";
+    element.addEventListener('mouseout', () => {
+        modificarWidthHeigth(cursor, '40px');
     });
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
