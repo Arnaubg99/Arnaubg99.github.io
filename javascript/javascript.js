@@ -117,10 +117,10 @@ modalCreu.addEventListener("click", () =>{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////MOUSE/////////////////////////////////////////////////////////////////////////////////////////
-document.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', element => {
     let a = cursor.offsetHeight / 2 - 5;
-    cursor.style.left = e.pageX - a + "px";
-    cursor.style.top = e.pageY - a + "px";
+    cursor.style.left = element.pageX - a + "px";
+    cursor.style.top = element.pageY - a + "px";
 });
 const clickableElements = document.querySelectorAll(".clickable");
 clickableElements.forEach(element => {
