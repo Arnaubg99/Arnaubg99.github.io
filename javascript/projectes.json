@@ -16,7 +16,7 @@
             "projecteTitol": "Listado de Productos",
             "projecteDescripcio": "Muesta un listado de productos de snowboard recibios desde una API a través de un servidor Node.js. Muestra datos de precio, descripción, variantes e imágenes del producto.",
             "projecteParaulesClau": "Proyecto hecho con HTML, CSS y JavaScript y Node.js.",
-            "projecteLink": "https://github.com/Arnaubg99/PruebaFantasticFy"
+            "projecteLink": "https://github.com/Arnaubg99/listado-de-productos"
         },
         {
             "id": 2,
