@@ -415,7 +415,6 @@ nav{
     position: fixed;
     flex-direction: row;
     animation: 1.2s linear 2.5s desapareixerOpacity;
-
 }
 .columna{
     width: 20%;
@@ -547,13 +546,13 @@ nav{
         opacity: 0%; 
     }
 }
-@keyframes apareixerOpacity { 
+/* @keyframes apareixerOpacity { 
     from { 
         opacity: 0%;
     } to { 
         opacity: 100%; 
     }
-}
+} */
 @keyframes glowing {
     0%{
         background-position: 0% 0%;
