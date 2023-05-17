@@ -99,7 +99,7 @@ let projectes;
 
 ///////////////////////LOGOS TEXT///////////////////////////////////////////////////////////////////////////////////////////
 logoGithub.addEventListener('mouseover', () => {
-    cambiarTextContacte('block', 'GITHUB', 'arnaubg99');
+    cambiarTextContacte('block', 'GITHUB', 'Arnaubg99');
 });
 logoLinkedin.addEventListener('mouseover', () => {
     cambiarTextContacte('block', 'LINKEDIN', 'Arnau Bayó Garcia');
