@@ -2,6 +2,7 @@ const cursor = document.querySelector(".cursor");
 const entrada = document.querySelector(".entrada");
 const html = document.querySelector("html");
 const body = document.querySelector("body");
+const navbar = document.querySelector("#navbar");
 const sobreMiButton = document.querySelector("#sobre-mi-nav-button");
 const projectesButton = document.querySelector("#projectes-nav-button");
 const contacteButton = document.querySelector("#contacte-nav-button");
@@ -27,6 +28,7 @@ const modalDescripcio = document.querySelector("#modal-descripcio");
 const modalParaulesClau = document.querySelector("#modal-paraules-clau");
 const modalBoto= document.querySelector("#modal-boto");
 const modalCreu = document.querySelector("#creu");
+let alturaInicial = window.scrollY;
 
 //////////////////////////ANIMACIO ENTRADA////////////////////////////////////////////////////////////////////////////////////////
 setTimeout(() => {
@@ -53,18 +55,28 @@ contacteButton.addEventListener('click', () => {
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////SUBRALLAT BOTONS NAVBAR///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////SUBRALLAT BOTONS NAVBAR I FER APAREIXER/DESAPAREIXER NAVBAR///////////////////////////////////////////////////////////////////////////////////////
 window.addEventListener('scroll', () => {
+    //SUBRALLAT BOTONS NAVBAR
     if (!isInViewport(sobreMiCheck)) {
         if (!isInViewport(projectesCheck)) {
-            afegirTreureClases(contacteButton, [sobreMiButton, projectesButton], 'selected')
+            afegirTreureClases(contacteButton, [sobreMiButton, projectesButton], 'selected');
         } else {
-            afegirTreureClases(projectesButton, [sobreMiButton, contacteButton], 'selected')
+            afegirTreureClases(projectesButton, [sobreMiButton, contacteButton], 'selected');
         }
     } else {
-        afegirTreureClases(sobreMiButton, [projectesButton, contacteButton], 'selected')
+        afegirTreureClases(sobreMiButton, [projectesButton, contacteButton], 'selected');
     }
-})
+
+    //APAREIXER/DESAPAREIXER NAVBAR
+    let alturaActual = window.scrollY;
+    if(alturaActual <= alturaInicial){
+        navbar.style.top = "0%";
+    }else{
+        navbar.style.top = "-100%";
+    }
+    alturaInicial = alturaActual
+});
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////PROJECTES CARDS//////////////////////////////////////////////////////////////////////////////////
