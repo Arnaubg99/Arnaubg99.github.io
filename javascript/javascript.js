@@ -30,6 +30,13 @@ const modalBoto= document.querySelector("#modal-boto");
 const modalCreu = document.querySelector("#creu");
 let alturaInicial = window.scrollY;
 
+function isMouse(pointer) {
+    if (pointer.type == "mouse"){
+      return true;
+    } else {
+      return false;
+    }
+  }
 //////////////////////////ANIMACIO ENTRADA////////////////////////////////////////////////////////////////////////////////////////
 setTimeout(() => {
     entrada.style.display = "none"; 
@@ -69,31 +76,37 @@ window.addEventListener('scroll', () => {
     }
 
     //APAREIXER/DESAPAREIXER NAVBAR
-    let alturaActual = window.scrollY;
-    if(alturaActual == 0){
+    const ampladaPantalla  = window.innerWidth;
+    console.log(ampladaPantalla)
+    if(ampladaPantalla <= 820){
         navbar.style.top = '0%';
-    }else if(alturaActual <= alturaInicial){
-        var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
-        if(alturaNavbarNumber <= 0){
-            var alturaNavbarActualizado = alturaNavbarNumber + 0.5;
-            if(alturaNavbarActualizado > 0){
-                navbar.style.top = '0%';
-            }else{
-                navbar.style.top = alturaNavbarActualizado + '%';
-            }
-        }
     }else{
-        var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
-        if(alturaNavbarNumber >= -100){
-            var alturaNavbarActualizado = alturaNavbarNumber - 0.1;
-            if(alturaNavbarActualizado < -100){
-                navbar.style.top = '-100%';
-            }else{
-                navbar.style.top = alturaNavbarActualizado + '%';
+        const alturaActual = window.scrollY;
+        if(alturaActual == 0){
+            navbar.style.top = '0%';
+        }else if(alturaActual <= alturaInicial){
+            var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
+            if(alturaNavbarNumber <= 0){
+                var alturaNavbarActualizado = alturaNavbarNumber + 0.5;
+                if(alturaNavbarActualizado > 0){
+                    navbar.style.top = '0%';
+                }else{
+                    navbar.style.top = alturaNavbarActualizado + '%';
+                }
+            }
+        }else{
+            var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
+            if(alturaNavbarNumber >= -100){
+                var alturaNavbarActualizado = alturaNavbarNumber - 0.1;
+                if(alturaNavbarActualizado < -100){
+                    navbar.style.top = '-100%';
+                }else{
+                    navbar.style.top = alturaNavbarActualizado + '%';
+                }
             }
         }
-    }
-    alturaInicial = alturaActual
+        alturaInicial = alturaActual
+    }   
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
