@@ -70,10 +70,28 @@ window.addEventListener('scroll', () => {
 
     //APAREIXER/DESAPAREIXER NAVBAR
     let alturaActual = window.scrollY;
-    if(alturaActual <= alturaInicial){
-        navbar.style.top = "0%";
+    if(alturaActual == 0){
+        navbar.style.top = '0%';
+    }else if(alturaActual <= alturaInicial){
+        var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
+        if(alturaNavbarNumber <= 0){
+            var alturaNavbarActualizado = alturaNavbarNumber + 0.5;
+            if(alturaNavbarActualizado > 0){
+                navbar.style.top = '0%';
+            }else{
+                navbar.style.top = alturaNavbarActualizado + '%';
+            }
+        }
     }else{
-        navbar.style.top = "-100%";
+        var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
+        if(alturaNavbarNumber >= -100){
+            var alturaNavbarActualizado = alturaNavbarNumber - 0.1;
+            if(alturaNavbarActualizado < -100){
+                navbar.style.top = '-100%';
+            }else{
+                navbar.style.top = alturaNavbarActualizado + '%';
+            }
+        }
     }
     alturaInicial = alturaActual
 });
@@ -91,7 +109,6 @@ let projectes;
         crearElement('h3', ['projecte-card-info-titol'], undefined, projecte.projecteTitol, cardInfoWrap, true);
         crearElement('p', undefined, undefined, projecte.projecteParaulesClau, cardInfoWrap, false);
         const cardButton = crearElement('a', ['projecte-card-button', 'clickable', 'boto'], undefined, 'Ver', card, true);
-    
         cardButton.addEventListener("click", obrirModal.bind(this, projecte.projecteTitol, projecte.projecteVideo, projecte.projecteDescripcio, projecte.projecteParaulesClau, projecte.projecteLink)); 
     });
 

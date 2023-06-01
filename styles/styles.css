@@ -172,7 +172,6 @@ h3{
     backdrop-filter: blur(3px);
     background-color: rgba(35, 35, 35, 0.2);
     z-index: 1;
-    transition: 0.5s;
 }
 #logo-navbar{
     height: 75%;
