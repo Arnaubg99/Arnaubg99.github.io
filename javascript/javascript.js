@@ -18,7 +18,6 @@ const projecteCard = document.querySelector("#projecte-card");
 const logoGithub = document.querySelector("#logo-github");
 const logoLinkedin = document.querySelector("#logo-linkedin");
 const logoEmail = document.querySelector("#logo-email");
-const logoInstagram = document.querySelector("#logo-instagram");
 const logosContacte = document.querySelectorAll(".logo-contacte");
 const titolLogo = document.querySelector("#text-contacte-titol");
 const textLogo = document.querySelector("#text-contacte");
@@ -78,7 +77,6 @@ window.addEventListener('scroll', () => {
 
     //APAREIXER/DESAPAREIXER NAVBAR
     const ampladaPantalla  = window.innerWidth;
-    console.log(ampladaPantalla)
     if(ampladaPantalla <= 820){
         navbar.style.top = '0%';
     }else{
@@ -149,9 +147,6 @@ logoLinkedin.addEventListener('mouseover', () => {
 });
 logoEmail.addEventListener('mouseover', () => {
     cambiarTextContacte('block', 'CORREO ELECTRONICO', 'arnaubayo99@gmail.com');
-});
-logoInstagram.addEventListener('mouseover', () => {
-    cambiarTextContacte('block', 'INSTAGRAM', '@arnaubg99');
 });
 logosContacte.forEach(logo => {
     logo.addEventListener('mouseout', () => {
