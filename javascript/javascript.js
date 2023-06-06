@@ -12,6 +12,7 @@ const contacteContainer = document.querySelector(".contacte-container");
 const sobreMiCheck = document.querySelector("#sobre-mi-check");
 const projectesCheck = document.querySelector("#projectes-check");
 const contacteCheck = document.querySelector("#contacte-check");
+const textProjectes = document.querySelector('.text-projectes');
 const projecteCardsWrap = document.querySelector("#projecte-cards-wrap");
 const projecteCard = document.querySelector("#projecte-card");
 const logoGithub = document.querySelector("#logo-github");
@@ -115,6 +116,7 @@ let projectes;
 (async () => {
     let resposta = await rebreProjectesJSON();
     projectes = resposta.projectes;
+    textProjectes.innerHTML = `Listado con mis proyectos: ${projectes.length}`
     projectes.forEach(projecte => {
         const card = crearElement('div', ['projecte-card'], undefined, undefined, projecteCardsWrap, true);
         crearElement('img', ['projecte-card-img'],[atribut1={clau: 'src', valor: projecte.projecteImg}], undefined, card, true);
