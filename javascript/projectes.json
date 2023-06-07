@@ -56,6 +56,15 @@
         },
         {
             "id": 6,
+            "projecteImg": "assets/CapturesProjectes/bateria.jpg",
+            "projecteVideo": "assets/VideosProjectes/bateria.mp4",
+            "projecteTitol": "Kit de batería",
+            "projecteDescripcio": "Diversos sonidos de batería que se activan con las teclas A, S, D, F, G, H, J, K.",
+            "projecteParaulesClau": "Proyecto hecho con HTML, CSS y JavaScript.",
+            "projecteLink": "https://github.com/Arnaubg99/Kit-de-bateria"
+        },
+        {
+            "id": 7,
             "projecteImg": "assets/CapturesProjectes/calculadora.jpg",
             "projecteVideo": "assets/VideosProjectes/calculadora.mp4",
             "projecteTitol": "Calculadora",
@@ -64,7 +73,7 @@
             "projecteLink": "https://github.com/Arnaubg99/calculadora"
         },
         {
-            "id": 7,
+            "id": 8,
             "projecteImg": "assets/CapturesProjectes/tribut.jpg",
             "projecteVideo": "assets/VideosProjectes/pagina_tribut.mp4",
             "projecteTitol": "Página tributo",
@@ -73,7 +82,7 @@
             "projecteLink": "https://github.com/Arnaubg99/pagina-tributo"
         },
         {
-            "id": 8,
+            "id": 9,
             "projecteImg": "assets/CapturesProjectes/formulari.jpg",
             "projecteVideo": "assets/VideosProjectes/formulari.mp4",
             "projecteTitol": "Ejemplo de formulario",
