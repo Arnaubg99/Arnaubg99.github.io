@@ -90,7 +90,7 @@ window.addEventListener('scroll', () => {
                 if(alturaNavbarActualizado > 0){
                     navbar.style.top = '0%';
                 }else{
-                    navbar.style.top = alturaNavbarActualizado + '%';
+                    navbar.style.top = `${alturaNavbarActualizado}%`;
                 }
             }
         }else{
@@ -100,7 +100,7 @@ window.addEventListener('scroll', () => {
                 if(alturaNavbarActualizado < -100){
                     navbar.style.top = '-100%';
                 }else{
-                    navbar.style.top = alturaNavbarActualizado + '%';
+                    navbar.style.top = `${alturaNavbarActualizado}%`;
                 }
             }
         }
@@ -168,7 +168,7 @@ modalCreu.addEventListener("click", () =>{
 //////////////////////MOUSE/////////////////////////////////////////////////////////////////////////////////////////
 document.addEventListener('mousemove', element => {
     let a = cursor.offsetHeight / 2 - 5;
-    cursor.style.left = element.pageX - a + "px";
-    cursor.style.top = element.pageY - a + "px";
+    cursor.style.left = `${element.pageX - a}px`;
+    cursor.style.top = `${element.pageY - a}px`;
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
