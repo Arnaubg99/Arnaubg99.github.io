@@ -47,6 +47,15 @@
         },
         {
             "id": 5,
+            "projecteImg": "assets/CapturesProjectes/rellotge.jpg",
+            "projecteVideo": "assets/VideosProjectes/rellotge.mp4",
+            "projecteTitol": "Reloj",
+            "projecteDescripcio": "Reloj de agujas que marca la hora, los minutos y los segundos en tiempo real.",
+            "projecteParaulesClau": "Proyecto hecho con HTML, CSS y JavaScript.",
+            "projecteLink": "https://github.com/Arnaubg99/reloj"
+        },
+        {
+            "id": 6,
             "projecteImg": "assets/CapturesProjectes/calculadora.jpg",
             "projecteVideo": "assets/VideosProjectes/calculadora.mp4",
             "projecteTitol": "Calculadora",
@@ -55,7 +64,7 @@
             "projecteLink": "https://github.com/Arnaubg99/calculadora"
         },
         {
-            "id": 6,
+            "id": 7,
             "projecteImg": "assets/CapturesProjectes/tribut.jpg",
             "projecteVideo": "assets/VideosProjectes/pagina_tribut.mp4",
             "projecteTitol": "Página tributo",
@@ -64,7 +73,7 @@
             "projecteLink": "https://github.com/Arnaubg99/pagina-tributo"
         },
         {
-            "id": 7,
+            "id": 8,
             "projecteImg": "assets/CapturesProjectes/formulari.jpg",
             "projecteVideo": "assets/VideosProjectes/formulari.mp4",
             "projecteTitol": "Ejemplo de formulario",
