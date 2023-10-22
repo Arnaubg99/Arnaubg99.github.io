@@ -76,36 +76,36 @@ window.addEventListener('scroll', () => {
     }
 
     //APAREIXER/DESAPAREIXER NAVBAR
-    const ampladaPantalla  = window.innerWidth;
-    if(ampladaPantalla <= 820){
-        navbar.style.top = '0%';
-    }else{
-        const alturaActual = window.scrollY;
-        if(alturaActual == 0){
-            navbar.style.top = '0%';
-        }else if(alturaActual <= alturaInicial){
-            var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
-            if(alturaNavbarNumber <= 0){
-                var alturaNavbarActualizado = alturaNavbarNumber + 0.5;
-                if(alturaNavbarActualizado > 0){
-                    navbar.style.top = '0%';
-                }else{
-                    navbar.style.top = `${alturaNavbarActualizado}%`;
-                }
-            }
-        }else{
-            var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
-            if(alturaNavbarNumber >= -100){
-                var alturaNavbarActualizado = alturaNavbarNumber - 0.1;
-                if(alturaNavbarActualizado < -100){
-                    navbar.style.top = '-100%';
-                }else{
-                    navbar.style.top = `${alturaNavbarActualizado}%`;
-                }
-            }
-        }
-        alturaInicial = alturaActual
-    }   
+    // const ampladaPantalla  = window.innerWidth;
+    // if(ampladaPantalla <= 820){
+    //     navbar.style.top = '0%';
+    // }else{
+    //     const alturaActual = window.scrollY;
+    //     if(alturaActual == 0){
+    //         navbar.style.top = '0%';
+    //     }else if(alturaActual <= alturaInicial){
+    //         var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
+    //         if(alturaNavbarNumber <= 0){
+    //             var alturaNavbarActualizado = alturaNavbarNumber + 0.5;
+    //             if(alturaNavbarActualizado > 0){
+    //                 navbar.style.top = '0%';
+    //             }else{
+    //                 navbar.style.top = `${alturaNavbarActualizado}%`;
+    //             }
+    //         }
+    //     }else{
+    //         var alturaNavbarNumber = Number(navbar.style.top.replace('%',''));
+    //         if(alturaNavbarNumber >= -100){
+    //             var alturaNavbarActualizado = alturaNavbarNumber - 0.1;
+    //             if(alturaNavbarActualizado < -100){
+    //                 navbar.style.top = '-100%';
+    //             }else{
+    //                 navbar.style.top = `${alturaNavbarActualizado}%`;
+    //             }
+    //         }
+    //     }
+    //     alturaInicial = alturaActual
+    // }   
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -11,6 +11,15 @@
         },
         {
             "id": 1,
+            "projecteImg": "assets/CapturesProjectes/datos_covid.jpg",
+            "projecteVideo": "assets/VideosProjectes/datos_covid.mp4",
+            "projecteTitol": "Datos del COVID-19",
+            "projecteDescripcio": "Muesta en gráficos los datos del COVID-19 de Estados Unidos por fechas y estados.",
+            "projecteParaulesClau": "Proyecto hecho con Vue.js, Node.js, TypeScript, HTML, CSS.",
+            "projecteLink": "https://github.com/Arnaubg99/datos-covid"
+        },
+        {
+            "id": 2,
             "projecteImg": "assets/CapturesProjectes/productes-snow.jpg",
             "projecteVideo": "assets/VideosProjectes/productes-snow.mp4",
             "projecteTitol": "Listado de Productos",
@@ -19,7 +28,7 @@
             "projecteLink": "https://github.com/Arnaubg99/listado-de-productos"
         },
         {
-            "id": 2,
+            "id": 3,
             "projecteImg": "assets/CapturesProjectes/portafolio.png",
             "projecteVideo": "assets/VideosProjectes/portafolio.mp4",
             "projecteTitol": "Portafolio Web",
@@ -28,7 +37,7 @@
             "projecteLink": "https://github.com/Arnaubg99/Arnaubg99.github.io"
         },
         {
-            "id": 3,
+            "id": 4,
             "projecteImg": "assets/CapturesProjectes/dietizate.jpg",
             "projecteVideo": "assets/VideosProjectes/dietizate.mp4",
             "projecteTitol": "Web Dietízate",
@@ -37,7 +46,7 @@
             "projecteLink": "https://github.com/Arnaubg99/web-dietizate"
         },
         {
-            "id": 4,
+            "id": 5,
             "projecteImg": "assets/CapturesProjectes/cami-al-mercat.jpg",
             "projecteVideo": "assets/VideosProjectes/cami_al_mercat.mp4",
             "projecteTitol": "Camino al mercado",
@@ -46,7 +55,7 @@
             "projecteLink": "https://github.com/Arnaubg99/camino-al-mercado"
         },
         {
-            "id": 5,
+            "id": 6,
             "projecteImg": "assets/CapturesProjectes/rellotge.jpg",
             "projecteVideo": "assets/VideosProjectes/rellotge.mp4",
             "projecteTitol": "Reloj",
@@ -55,7 +64,7 @@
             "projecteLink": "https://github.com/Arnaubg99/reloj"
         },
         {
-            "id": 6,
+            "id": 7,
             "projecteImg": "assets/CapturesProjectes/bateria.jpg",
             "projecteVideo": "assets/VideosProjectes/bateria.mp4",
             "projecteTitol": "Kit de batería",
@@ -64,7 +73,7 @@
             "projecteLink": "https://github.com/Arnaubg99/Kit-de-bateria"
         },
         {
-            "id": 7,
+            "id": 8,
             "projecteImg": "assets/CapturesProjectes/calculadora.jpg",
             "projecteVideo": "assets/VideosProjectes/calculadora.mp4",
             "projecteTitol": "Calculadora",
@@ -73,7 +82,7 @@
             "projecteLink": "https://github.com/Arnaubg99/calculadora"
         },
         {
-            "id": 8,
+            "id": 9,
             "projecteImg": "assets/CapturesProjectes/tribut.jpg",
             "projecteVideo": "assets/VideosProjectes/pagina_tribut.mp4",
             "projecteTitol": "Página tributo",
@@ -82,7 +91,7 @@
             "projecteLink": "https://github.com/Arnaubg99/pagina-tributo"
         },
         {
-            "id": 9,
+            "id": 10,
             "projecteImg": "assets/CapturesProjectes/formulari.jpg",
             "projecteVideo": "assets/VideosProjectes/formulari.mp4",
             "projecteTitol": "Ejemplo de formulario",
