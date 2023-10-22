@@ -127,14 +127,14 @@ let projectes;
 
     //AFEGIR EFECTE AMPLIAR/REDUIR ESFERA ALS ELEMENT QUE CONTENEN LA CLASSE CLICKABLE
     const clickableElements = document.querySelectorAll(".clickable");
-    clickableElements.forEach(element => {
-    element.addEventListener('mouseover', () => {
-        modificarWidthHeigth(cursor, '70px');
+        clickableElements.forEach(element => {
+        element.addEventListener('mouseover', () => {
+            modificarWidthHeigth(cursor, '70px');
+        });
+        element.addEventListener('mouseout', () => {
+            modificarWidthHeigth(cursor, '40px');
+        });
     });
-    element.addEventListener('mouseout', () => {
-        modificarWidthHeigth(cursor, '40px');
-    });
-});
 })();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

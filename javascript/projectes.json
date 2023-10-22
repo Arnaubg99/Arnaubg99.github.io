@@ -14,7 +14,7 @@
             "projecteImg": "assets/CapturesProjectes/datos_covid.jpg",
             "projecteVideo": "assets/VideosProjectes/datos_covid.mp4",
             "projecteTitol": "Datos del COVID-19",
-            "projecteDescripcio": "Muesta en gráficos los datos del COVID-19 de Estados Unidos por fechas y estados.",
+            "projecteDescripcio": "Muesta en gráficos los datos del COVID-19 de Estados Unidos por fechas y estados recibidos mediante APIs.",
             "projecteParaulesClau": "Proyecto hecho con Vue.js, Node.js, TypeScript, HTML, CSS.",
             "projecteLink": "https://github.com/Arnaubg99/datos-covid"
         },
