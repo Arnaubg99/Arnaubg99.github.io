@@ -711,6 +711,9 @@ h3{
     #text-sobre-mi{
         font-size: 1.5rem;
     }
+    .switch-mode-clar-fosc-wrapper{
+        display: none;
+    }
 }
 @media (max-height:500px) {
     section{
