@@ -69,3 +69,14 @@ function isInViewport(element) {
     let distancia = element.getBoundingClientRect();
     return distancia.top < (window.innerHeight || document.documentElement.clientHeight) && distancia.bottom > 0;
 }
+
+//CANVI DE MODE CLAR A FOSC
+function canviModeClar_Fosc(element, clase) {
+    if(element.classList.contains(clase)){
+        element.classList.remove(clase);
+    }else{
+        element.classList.add(clase);
+    }
+}
+
+

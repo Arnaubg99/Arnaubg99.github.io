@@ -28,6 +28,8 @@ const modalDescripcio = document.querySelector("#modal-descripcio");
 const modalParaulesClau = document.querySelector("#modal-paraules-clau");
 const modalBoto= document.querySelector("#modal-boto");
 const modalCreu = document.querySelector("#creu");
+const switchModeClarFosc = document.querySelector('#switch-mode-clar-fosc');
+const logoNavbar = document.querySelector('#logo-navbar');
 let alturaInicial = window.scrollY;
 
 function isMouse(pointer) {
@@ -172,3 +174,52 @@ document.addEventListener('mousemove', element => {
     cursor.style.top = `${element.pageY - a}px`;
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////CANVI DE MODE CLAR A FOSC////////////////////////////////////////////////////////////////////////////////////////////
+
+switchModeClarFosc.addEventListener('click', () => {
+    const logoNavbarSrc = logoNavbar.getAttribute('src')
+    if(logoNavbarSrc ==='./assets/logo-negre.png'){
+        logoNavbar.setAttribute('src', './assets/logo-blanc.png')
+    }else{
+        logoNavbar.setAttribute('src', './assets/logo-negre.png')
+    }
+    const logosModeFosc = document.querySelectorAll('.logo-mode-clar-fosc')
+    logosModeFosc.forEach(logo => {
+        let logoSrc = logo.getAttribute('src')
+        if(logoSrc.includes('fosc')){
+            if(logoSrc.includes('sol')){
+                logo.setAttribute('src', './assets/sol-clar.png')
+            }else{
+                logo.setAttribute('src', './assets/lluna-clar.png')
+            }
+        }else{
+            if(logoSrc.includes('sol')){
+                logo.setAttribute('src', './assets/sol-fosc.png')
+            }else{
+                logo.setAttribute('src', './assets/lluna-fosc.png')
+            }
+        }
+    })
+    canviModeClar_Fosc(body, 'body-mode-fosc')
+
+    const projecteCards = document.querySelectorAll('.projecte-card')
+    projecteCards.forEach(projecte => {
+        canviModeClar_Fosc(projecte, 'projecte-card-mode-fosc')
+    })
+
+    const botons = document.querySelectorAll('.boto')
+    botons.forEach(boto => {
+        canviModeClar_Fosc(boto, 'boto-mode-fosc')
+    })
+
+    const links = document.querySelectorAll('a')
+    links.forEach(link => {
+        canviModeClar_Fosc(link, 'a-mode-fosc')
+    })
+
+    const navButtons = document.querySelectorAll('.nav-button')
+    navButtons.forEach(navButton => {
+        canviModeClar_Fosc(navButton, 'nav-button-mode-fosc')
+    })
+})
