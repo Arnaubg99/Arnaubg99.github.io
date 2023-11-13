@@ -2,6 +2,15 @@
     "projectes":[
         {
             "id": 0,
+            "projecteImg": "assets/CapturesProjectes/aplicacio-pelicules.png",
+            "projecteVideo": "assets/VideosProjectes/aplicacio-pelicules.mp4",
+            "projecteTitol": "App Películas",
+            "projecteDescripcio": "Busca películas, series o episodios de la api de Omd a través de su título. Guarda los resultados deseados en favoritos en LocalStorage, dónde se muestran en formato tarjeta, al clickar en 'see more' aparece información del objeto deseado y se puede añadir una descripción.",
+            "projecteParaulesClau": "Proyecto hecho con Angular, Angular Material, TypeScript, HTML y CSS.",
+            "projecteLink": "https://github.com/Arnaubg99/aplicacion-peliculas"
+        },
+        {
+            "id": 1,
             "projecteImg": "assets/CapturesProjectes/app-tiempo.jpg",
             "projecteVideo": "assets/VideosProjectes/app_meteorologica.mp4",
             "projecteTitol": "App Meteorológica",
@@ -10,7 +19,7 @@
             "projecteLink": "https://github.com/Arnaubg99/aplicacion-meteorologica"
         },
         {
-            "id": 1,
+            "id": 2,
             "projecteImg": "assets/CapturesProjectes/datos_covid.jpg",
             "projecteVideo": "assets/VideosProjectes/datos_covid.mp4",
             "projecteTitol": "Datos del COVID-19",
@@ -19,7 +28,7 @@
             "projecteLink": "https://github.com/Arnaubg99/datos-covid"
         },
         {
-            "id": 2,
+            "id": 3,
             "projecteImg": "assets/CapturesProjectes/productes-snow.jpg",
             "projecteVideo": "assets/VideosProjectes/productes-snow.mp4",
             "projecteTitol": "Listado de Productos",
@@ -28,7 +37,7 @@
             "projecteLink": "https://github.com/Arnaubg99/listado-de-productos"
         },
         {
-            "id": 3,
+            "id": 4,
             "projecteImg": "assets/CapturesProjectes/portafolio.png",
             "projecteVideo": "assets/VideosProjectes/portafolio.mp4",
             "projecteTitol": "Portafolio Web",
@@ -37,7 +46,7 @@
             "projecteLink": "https://github.com/Arnaubg99/Arnaubg99.github.io"
         },
         {
-            "id": 4,
+            "id": 5,
             "projecteImg": "assets/CapturesProjectes/dietizate.jpg",
             "projecteVideo": "assets/VideosProjectes/dietizate.mp4",
             "projecteTitol": "Web Dietízate",
@@ -46,7 +55,7 @@
             "projecteLink": "https://github.com/Arnaubg99/web-dietizate"
         },
         {
-            "id": 5,
+            "id": 6,
             "projecteImg": "assets/CapturesProjectes/cami-al-mercat.jpg",
             "projecteVideo": "assets/VideosProjectes/cami_al_mercat.mp4",
             "projecteTitol": "Camino al mercado",
@@ -55,7 +64,7 @@
             "projecteLink": "https://github.com/Arnaubg99/camino-al-mercado"
         },
         {
-            "id": 6,
+            "id": 7,
             "projecteImg": "assets/CapturesProjectes/rellotge.jpg",
             "projecteVideo": "assets/VideosProjectes/rellotge.mp4",
             "projecteTitol": "Reloj",
@@ -64,7 +73,7 @@
             "projecteLink": "https://github.com/Arnaubg99/reloj"
         },
         {
-            "id": 7,
+            "id": 8,
             "projecteImg": "assets/CapturesProjectes/bateria.jpg",
             "projecteVideo": "assets/VideosProjectes/bateria.mp4",
             "projecteTitol": "Kit de batería",
@@ -73,31 +82,13 @@
             "projecteLink": "https://github.com/Arnaubg99/Kit-de-bateria"
         },
         {
-            "id": 8,
+            "id": 9,
             "projecteImg": "assets/CapturesProjectes/calculadora.jpg",
             "projecteVideo": "assets/VideosProjectes/calculadora.mp4",
             "projecteTitol": "Calculadora",
             "projecteDescripcio": "Calculadora capaz de hacer sumas, restas, multiplicaciones y divisiones.",
             "projecteParaulesClau": "Proyecto hecho con HTML, CSS y JavaScript.",
             "projecteLink": "https://github.com/Arnaubg99/calculadora"
-        },
-        {
-            "id": 9,
-            "projecteImg": "assets/CapturesProjectes/tribut.jpg",
-            "projecteVideo": "assets/VideosProjectes/pagina_tribut.mp4",
-            "projecteTitol": "Página tributo",
-            "projecteDescripcio": "Página con datos de una personalidad icónica.",
-            "projecteParaulesClau": "Proyecto hecho con HTML y CSS.",
-            "projecteLink": "https://github.com/Arnaubg99/pagina-tributo"
-        },
-        {
-            "id": 10,
-            "projecteImg": "assets/CapturesProjectes/formulari.jpg",
-            "projecteVideo": "assets/VideosProjectes/formulari.mp4",
-            "projecteTitol": "Ejemplo de formulario",
-            "projecteDescripcio": "Formulario de ejemplo con diversos tipos de campos.",
-            "projecteParaulesClau": "Proyecto hecho con HTML y CSS.",
-            "projecteLink": "https://github.com/Arnaubg99/formulario-de-ejemplo"
         }
     ]
 }
