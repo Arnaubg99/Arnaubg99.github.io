@@ -540,6 +540,9 @@ h3{
 #modal-video, #modal-descripcio, #modal-paraules-clau{
     width: 55%;
 }
+#modal-text{
+    color: var(--color-text-mode-clar);
+}
 #modal-descripcio{
     color: var(--color-text-mode-clar);
 }
